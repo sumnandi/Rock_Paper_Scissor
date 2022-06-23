@@ -34,6 +34,10 @@ list1=[rock,paper,scissors]
 print(f"Rock: {rock}\n Paper: {paper}\n Scissors: {scissors}") 
 
 user=int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors."))
+if user >2 or user <0:
+    print("You have entered an Invalid Number. Please Enter again.")
+    user=int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors."))
+
 print(f"You Chose \n{list1[user]}\n")
 computer=random.randint(0,2)
 print(f"Computer Chose \n{list1[computer]}")
